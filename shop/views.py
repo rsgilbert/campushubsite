@@ -18,4 +18,3 @@ class ProductsList(APIView):
 		data = ProductSerializer(products, many=True).data
 		return Response(data)
 	
-
