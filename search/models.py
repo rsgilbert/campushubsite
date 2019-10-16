@@ -4,6 +4,9 @@ from django.db import models
 
 class SearchHistory(models.Model):
 	seachword = models.CharField(max_length=255)
+	time = models.DateTimeField(auto_now=True)
+
 
 	def __str__(self):
-		return self.seachword
+		return f'{ self.seachword } on { self.time.date() }'
+
